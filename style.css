@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "permanent marker", cursive;
+    cursor: none;
+}
+
+.dot, .outline{
+    background-color: #f8f826;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.dot{
+    height: 20px;
+    width: 20px;
+}
+
+.outline{
+    height: 50px;
+    width: 50px;
+    opacity: 0.5;
+}
+
+.logo{
+    position: absolute;
+    height: 140px;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.1s ease-in-out;
+}
+
+.centerLogo:hover{
+    scale: 1.1;
+}
+
+.scoreBoard{
+    height: 200px;
+    left: 90%;
+    top: -5%;
+}
+
+.mainMenu{
+    left: 10%;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.bucket-container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 150px;
+    width: 300px;
+}
+
+.bucket{
+    position: absolute;
+    height: 150px;
+    width: 300px;
+    object-fit: cover;
+    bottom: 0;
+    left: 10px;
+}
+
+.fruit-container{
+    height: 150px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fall 1s linear infinite;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+@keyframes fall {
+    0%{
+        top: -150px;
+    }
+    100%{
+        top: 550px;
+    }
+}
+
+.fruit{
+    position: absolute;
+    height: 80px;
+    width: 90px;
+}
+
+h1{
+    position: absolute;
+    z-index: 2;
+    top: 60px;
+    right: 70px;
+    font-size: 35px;
+    color: #f8f826;
+}
+
+.menu{
+    right: 84.5%;
+}
