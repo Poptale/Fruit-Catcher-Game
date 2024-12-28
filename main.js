@@ -15,7 +15,6 @@ let backgroundMusic = new Audio("Assets/Audios/Cute background music [under 25MB
 let scoreSound = new Audio("Assets/Audios/Score sound.mp4");
 let dot = document.querySelector(".dot");
 let outline = document.querySelector(".outline");
-let scoree = false;
 let score = 0;
 let timer = 60;
 let stats = document.querySelector(".stats-container");
@@ -26,7 +25,6 @@ setInterval(()=>{
         timeing.innerHTML = timer;
     }
     else{
-        scoree = true;
         stats.classList.add("bounce");
     };
 }, 1000)
@@ -104,19 +102,17 @@ function checkCollision(fruit, fruitName) {
     let bucketLeft = parseInt(window.getComputedStyle(bucket).getPropertyValue("left"));
 
     // Check if fruit is within the scoring area and hasn't been scored yet
-    if (fruitTop >= 510 && fruitTop < 650 && fruitLeft === bucketLeft && !scoree) {
+    if (fruitTop >= 510 && fruitTop < 650 && fruitLeft === bucketLeft) {
         if (!scoreFlags[fruitName]) {
             score++;
             scoreHeading.innerHTML = score;
             scoreSound.currentTime = 0;
             scoreSound.play();
             scoreFlags[fruitName] = true;
-            scoree = true;
         }
-    } else if (fruitTop >= 650 || fruitTop < 510 && scoree) {
+    } else if (fruitTop >= 650 || fruitTop < 510) {
         // Reset the score flag when fruit moves out of the scoring area
         scoreFlags[fruitName] = false;
-        scoree = false;
     }
 }
 
