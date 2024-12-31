@@ -5,6 +5,13 @@
     cursor: none;
 }
 
+body{
+    /* cursor: url("Assets/Sprites/cursor.png") 95 95, auto; */
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
 .dot, .outline{
     background-color: #f8f826;
     border-radius: 50%;
@@ -27,402 +34,199 @@
     opacity: 0.5;
 }
 
-.logo{
-    position: absolute;
-    height: 140px;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    transition: 0.1s ease-in-out;
-}
-
-.centerLogo:hover{
-    scale: 1.1;
-}
-
-.scoreBoard{
-    height: 200px;
-    left: 90%;
-    top: -5%;
-}
-
-.mainMenu{
-    left: 10%;
-}
-
 .container{
     height: 100vh;
     width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    top: -100px;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
 }
 
 .background{
-    object-fit: cover;
     height: 100%;
     width: 100%;
-}
-
-.bucket-container{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 150px;
-    width: 300px;
-}
-
-.bucket{
-    position: absolute;
-    height: 150px;
-    width: 300px;
     object-fit: cover;
-    bottom: 0;
-    left: 10px;
 }
 
-.fruit-container{
-    height: 150px;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: fall 2s linear infinite;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-@keyframes fall {
-    0%{
-        top: -250px;
-    }
-    100%{
-        top: 650px;
-    }
-}
-
-.fruit{
+.logo{
+    height: 220px;
+    width: 550px;
+    object-fit: cover;
     position: absolute;
-    height: 80px;
-    width: 90px;
-}
-
-.banana-container{
-    height: 150px;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: fall 2s linear infinite;
-    animation-delay: 200ms;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-@keyframes fall {
-    0%{
-        top: -250px;
-    }
-    100%{
-        top: 650px;
-    }
-}
-
-.banana{
-    position: absolute;
-    height: 80px;
-    width: 90px;
-}
-
-.pineapple-container{
-    height: 150px;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: fall 2s linear infinite;
-    animation-delay: 400ms;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-@keyframes fall {
-    0%{
-        top: -250px;
-    }
-    100%{
-        top: 650px;
-    }
-}
-
-.pineapple{
-    position: absolute;
-    height: 110px;
-    width: 100px;
-}
-
-.grapes-container{
-    height: 150px;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: fall 2s linear infinite;
-    animation-delay: 600ms;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-@keyframes fall {
-    0%{
-        top: -250px;
-    }
-    100%{
-        top: 650px;
-    }
-}
-
-.grapes{
-    position: absolute;
-    height: 110px;
-    width: 110px;
-}
-
-.coco-container{
-    height: 150px;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: fall 2s linear infinite;
-    animation-delay: 800ms;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-@keyframes fall {
-    0%{
-        top: -250px;
-    }
-    100%{
-        top: 650px;
-    }
-}
-
-.coco{
-    position: absolute;
-    height: 90px;
-    width: 90px;
-}
-
-.orange-container{
-    height: 150px;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: fall 2s linear infinite;
-    animation-delay: 1000ms;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-@keyframes fall {
-    0%{
-        top: -250px;
-    }
-    100%{
-        top: 650px;
-    }
-}
-
-.orange{
-    position: absolute;
-    height: 90px;
-    width: 90px;
-}
-
-.melon-container{
-    height: 150px;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: fall 2s linear infinite;
-    animation-delay: 1200ms;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-@keyframes fall {
-    0%{
-        top: -250px;
-    }
-    100%{
-        top: 650px;
-    }
-}
-
-.melon{
-    position: absolute;
-    height: 90px;
-    width: 90px;
-}
-
-.berry-container{
-    height: 150px;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: fall 2s linear infinite;
-    animation-delay: 1400ms;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-@keyframes fall {
-    0%{
-        top: -250px;
-    }
-    100%{
-        top: 650px;
-    }
-}
-
-.berry{
-    position: absolute;
-    height: 90px;
-    width: 70px;
-}
-
-.cherry-container{
-    height: 150px;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: fall 2s linear infinite;
-    animation-delay: 1600ms;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-@keyframes fall {
-    0%{
-        top: -250px;
-    }
-    100%{
-        top: 650px;
-    }
-}
-
-.cherry{
-    position: absolute;
-    height: 90px;
-    width: 80px;
-}
-
-h1{
-    position: absolute;
-    z-index: 2;
-    top: 60px;
-    right: 70px;
-    font-size: 35px;
-    color: #000000;
-}
-
-.menu{
-    right: 84.5%;
-}
-
-.stats-container{
-    scale: 0;
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 130px;
+    left: 480px;
     z-index: 100;
+    scale: 1.2;
 }
+
+.musicPlayer{
+    position: absolute;
+    top: 400px;
+    right: 15px;
+    z-index: 1;
+    transition: 0.1s ease-in-out;
+}
+.musicPlayerr{
+    position: absolute;
+    top: 400px;
+    left: 15px;
+    z-index: 1;
+    transition: 0.1s ease-in-out;
+}
+.home{
+    top: 330px;
+}
+.homee{
+    top: 330px;
+}
+.musicPlayer:hover{
+    scale: 1.2;
+}
+.musicPlayerr:hover{
+    scale: 1.2;
+}
+
+.side{
+    position: absolute;
+    top: 370px;
+    height: 100px;
+    transition: 0.1s ease-in-out;
+    top: 420px;
+    left: 1310px;
+    rotate: 90deg;
+}
+
+.sidee{
+    position: absolute;
+    top: 370px;
+    height: 100px;
+    transition: 0.1s ease-in-out;
+    top: 420px;
+    left: -130px;
+    rotate: -90deg;
+}
+.side:hover{
+    scale: 1;
+}
+.i{
+    top: 470px;
+}
+.ii{
+    top: 470px;
+}
+.set{
+    top: 540px;
+}
+.sett{
+    top: 540px;
+}
+
+/* For headings */
+.play-heading{
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    pointer-events: none;
+    color: #f4b35e;
+}
+
+.options-heading{
+    left: 60px
+}
+
+.setting-heading{
+    left: 60px;
+}
+
+/* For img */
+.play{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    z-index: -1;
+}
+
+
+/* For main buttons divs*/
+.play-button {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 370px;
+    left: 600px;
+    transition: transform 0.1s ease-in-out;
+    transform-origin: center;
+}
+
+.play-button:hover {
+    transform: scale(1.1) translate(-10%, 0%);
+}
+
+.options-button{
+    top: 480px;
+}
+
+.setting-button{
+    top: 590px;
+}
+
+.options-board{
+    height: 550px;
+    z-index: 1000;
+    position: absolute;
+    top: 160px;
+}
+
+.close{
+    z-index: 10000;
+    position: absolute;
+    top: 200px;
+    left: 650px;
+}
+
+.o-board{
+    position: relative;
+    top: -350px;
+    left: -350px;
+    z-index: 10000;
+    transform: scale(0) translate(0, -10%);
+    transform-origin: center;
+}
+
 .bounce{
     animation: bounce 0.3s forwards;
 }
 @keyframes bounce {
     0%{
-        scale: 0;
+        transform: scale(0) translate(-10%, 0);
     }
     20%, 50%, 80%, 100% {
-      scale: 1;
+        transform: scale(1) translate(-10%, 0);
     }
     40% {
-      scale: 1.1;
+        transform: scale(1.1) translate(-10%, 0);
     }
     60% {
-      scale: 0.9;
+        transform: scale(0.9) translate(-10%, 0);
     }
   }
-.stats{
-    z-index: 1000;
-    height: 700px;
-}
 
-.summary-container{
-    height: 50vh;
-    width: 30%;
-    position: absolute;
-    z-index: 10000;
-}
+  .remove{
+    animation: remove 0.3s forwards;
+  }
 
-.summary1{
-    position: absolute;
-    padding: 20px;
-    top: 0;
-    left: 0;
-}
-.summary2{
-    top: 50px;
-    position: absolute;
-    left: 0;
-    padding: 20px;
-
-}
-.summary3{
-    position: absolute;
-    top: 100px;
-    left: 0;
-    padding: 20px;
-
-}
-
-.heading{
-    position: absolute;
-    top: 40px;
-    left: 42%;
-    z-index: 10000;
-    font-size: 50px;
-    font-weight: bolder;
-    color: #f2c87f;
-}
-
-.button-container{
-    height: 50vh;
-    width: 30%;
-    display: flex;
-    position: absolute;
-    top: 50px;
-    left: 30px;
-}
-
-.try-again{
-    position: absolute;
-    top: 220px;
-    left: 90px;
-}
-
-button{
-    background: transparent;
-    border: none;
-}
+  @keyframes remove {
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 2;
+    }
+  }

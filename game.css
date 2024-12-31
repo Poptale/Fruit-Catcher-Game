@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "permanent marker", cursive;
+    cursor: none;
+}
+
+.dot, .outline{
+    background-color: #f8f826;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000000;
+}
+
+.dot{
+    height: 20px;
+    width: 20px;
+}
+
+.outline{
+    height: 50px;
+    width: 50px;
+    opacity: 0.5;
+}
+
+.logo{
+    position: absolute;
+    height: 140px;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.1s ease-in-out;
+}
+
+.centerLogo:hover{
+    scale: 1.1;
+}
+
+.scoreBoard{
+    height: 200px;
+    left: 90%;
+    top: -5%;
+}
+
+.mainMenu{
+    left: 10%;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.bucket-container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 150px;
+    width: 300px;
+}
+
+.bucket{
+    position: absolute;
+    height: 150px;
+    width: 300px;
+    object-fit: cover;
+    bottom: 0;
+    left: 10px;
+}
+
+.fruit-container{
+    height: 150px;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: fall 2s linear infinite;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+@keyframes fall {
+    0%{
+        top: -250px;
+    }
+    100%{
+        top: 650px;
+    }
+}
+
+.fruit{
+    position: absolute;
+    height: 80px;
+    width: 90px;
+}
+
+.banana-container{
+    height: 150px;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: fall 2s linear infinite;
+    animation-delay: 200ms;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+@keyframes fall {
+    0%{
+        top: -250px;
+    }
+    100%{
+        top: 650px;
+    }
+}
+
+.banana{
+    position: absolute;
+    height: 80px;
+    width: 90px;
+}
+
+.pineapple-container{
+    height: 150px;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: fall 2s linear infinite;
+    animation-delay: 400ms;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+@keyframes fall {
+    0%{
+        top: -250px;
+    }
+    100%{
+        top: 650px;
+    }
+}
+
+.pineapple{
+    position: absolute;
+    height: 110px;
+    width: 100px;
+}
+
+.grapes-container{
+    height: 150px;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: fall 2s linear infinite;
+    animation-delay: 600ms;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+@keyframes fall {
+    0%{
+        top: -250px;
+    }
+    100%{
+        top: 650px;
+    }
+}
+
+.grapes{
+    position: absolute;
+    height: 110px;
+    width: 110px;
+}
+
+.coco-container{
+    height: 150px;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: fall 2s linear infinite;
+    animation-delay: 800ms;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+@keyframes fall {
+    0%{
+        top: -250px;
+    }
+    100%{
+        top: 650px;
+    }
+}
+
+.coco{
+    position: absolute;
+    height: 90px;
+    width: 90px;
+}
+
+.orange-container{
+    height: 150px;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: fall 2s linear infinite;
+    animation-delay: 1000ms;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+@keyframes fall {
+    0%{
+        top: -250px;
+    }
+    100%{
+        top: 650px;
+    }
+}
+
+.orange{
+    position: absolute;
+    height: 90px;
+    width: 90px;
+}
+
+.melon-container{
+    height: 150px;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: fall 2s linear infinite;
+    animation-delay: 1200ms;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+@keyframes fall {
+    0%{
+        top: -250px;
+    }
+    100%{
+        top: 650px;
+    }
+}
+
+.melon{
+    position: absolute;
+    height: 90px;
+    width: 90px;
+}
+
+.berry-container{
+    height: 150px;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: fall 2s linear infinite;
+    animation-delay: 1400ms;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+@keyframes fall {
+    0%{
+        top: -250px;
+    }
+    100%{
+        top: 650px;
+    }
+}
+
+.berry{
+    position: absolute;
+    height: 90px;
+    width: 70px;
+}
+
+.cherry-container{
+    height: 150px;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: fall 2s linear infinite;
+    animation-delay: 1600ms;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+@keyframes fall {
+    0%{
+        top: -250px;
+    }
+    100%{
+        top: 650px;
+    }
+}
+
+.cherry{
+    position: absolute;
+    height: 90px;
+    width: 80px;
+}
+
+h1{
+    position: absolute;
+    z-index: 2;
+    top: 60px;
+    right: 70px;
+    font-size: 35px;
+    color: #000000;
+}
+
+.menu{
+    right: 84.5%;
+}
+
+.stats-container{
+    scale: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.bounce{
+    animation: bounce 0.3s forwards;
+}
+@keyframes bounce {
+    0%{
+        scale: 0;
+    }
+    20%, 50%, 80%, 100% {
+      scale: 1;
+    }
+    40% {
+      scale: 1.1;
+    }
+    60% {
+      scale: 0.9;
+    }
+  }
+.stats{
+    z-index: 1000;
+    height: 700px;
+}
+
+.summary-container{
+    height: 50vh;
+    width: 30%;
+    position: absolute;
+    z-index: 10000;
+}
+
+.summary1{
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+}
+.summary2{
+    top: 50px;
+    position: absolute;
+    left: 0;
+    padding: 20px;
+
+}
+.summary3{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    padding: 20px;
+
+}
+
+.heading{
+    position: absolute;
+    top: 40px;
+    left: 42%;
+    z-index: 10000;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #f2c87f;
+}
+
+.button-container{
+    height: 50vh;
+    width: 30%;
+    display: flex;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+.try-again{
+    position: absolute;
+    top: 220px;
+    left: 90px;
+}
+
+button{
+    background: transparent;
+    border: none;
+}
